@@ -1,0 +1,7 @@
+project title:Timer and Task Management Application
+name: P G Ghautham Arveen
+GitHub: Ghautham2509
+EdX username: ghautham2509
+City: Bangalore
+Country: India
+Recorded on 06-06-2024.

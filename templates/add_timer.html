@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+<form action="/add_timer" method="post" >
+    <div class="mb-3">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="title" placeholder="Title" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="hours" placeholder="Hours" type="number">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="minutes" placeholder="Minutes" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Timer</button>
+        <p></p>
+    </div>
+</form>
+{% endblock %}

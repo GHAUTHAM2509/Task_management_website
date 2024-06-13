@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calender
+{% endblock %}
+
+{% block main %}
+    <h1>My Progess</h1>
+    <form action="/" method="post">
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit" name="action" value="add_task">Add Task</button>
+        </div>
+    </form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Progress</th>
+                <th>Days left</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.title }}</td>
+                    <td>{{ task.description }}</td>
+                    <td>
+                        {{ task.progress}}%
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{ task.progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{task.progress}}%">
+                    </div>
+                    </div>
+                    </td>
+                    <td> {{ task.left}} </td>
+                    <td>
+                        <a href="/update_task/{{ task.id }}" class="btn btn-warning btn-sm">Edit</a>
+                        <form action="/delete_task/{{ task.id }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+
+
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <form action="/update_task/{{ task.id }}" method="post">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}"  required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3">{{ task.description }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="start_time">Start Time:</label>
+            <input type="datetime-local" class="form-control" id="start_time" name="start_time" value="{{ task.start_time|replace(' ', ' ') }}" required>
+        </div>
+        <div class="form-group">
+            <label for="end_time">End Time:</label>
+            <input type="datetime-local" class="form-control" id="end_time" name="end_time" value="{{ task.end_time|replace(' ', ' ') }}" required>
+        </div>
+        <br>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="hours" placeholder="Hours: {{task.rhours}}" type="number" >
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="minutes" placeholder="Minutes: {{task.rminutes}}" type="number" >
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+{% endblock %}
+

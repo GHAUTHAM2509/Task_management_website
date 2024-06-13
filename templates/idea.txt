@@ -1,0 +1,31 @@
+progress tracker
+    the timer title and task title are same
+        based on total time - r_time and updated_time
+            gives percentage left or complete
+        based on end date and current date
+            gives how many days left
+
+total time_spent
+    from monday to sunday total time spent
+
+
+Add event-- And Task
+Take all info both add timer and add event takes create new combined 1 table.
+
+Title
+    title
+Description
+    description
+Progress
+    percentage finished
+Days left
+    days left
+Actions
+    same edit delete
+
+
+
+check if everything isworking properly
+fix days left
+and progress
+

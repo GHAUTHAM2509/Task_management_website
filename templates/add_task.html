@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Task
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h1>Add Task</h1>
+        <form action="/add_task" method="post">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="start_time">Start Time:</label>
+                <input type="datetime-local" class="form-control" id="start_time" name="start_time" required>
+            </div>
+            <div class="form-group">
+                <label for="end_time">End Time:</label>
+                <input type="datetime-local" class="form-control" id="end_time" name="end_time" required>
+            </div><br>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="hours" placeholder="Hours" type="number">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="minutes" placeholder="Minutes" type="number">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Event</button>
+        </form>
+    </div>
+{% endblock %}
+

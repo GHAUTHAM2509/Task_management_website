@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Timer
+{% endblock %}
+
+{% block main %}
+    <div class="timer-container">
+        {% for t in info_t %}
+
+        <div class="timer">
+            <div class="timer1">
+                <span id="title">{{t.title}}</span>  [<span id="rhours">{{t.rhours}}</span>:<span id="rminutes">{{t.rminutes}}</span>]
+
+            </div>
+            <div class="time-display">
+                <span id="hours">{{t.hours}}</span>:<span id="minutes">{{t.minutes}}</span>:<span id="seconds">00</span>
+            </div>
+            <div class="buttons">
+                <button id="start">Start</button>
+                <button id="pause" style="display: none;">Pause</button>
+                <button id="reset" style="display: none;">Reset</button>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+

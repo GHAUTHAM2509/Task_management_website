@@ -1,0 +1,127 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+/* ==== CONTENT ==== */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Specific styles for my_timer.html */
+.timer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: left;
+    height: 50vh;
+}
+
+/* Styling for the timer display */
+.timer-container .timer {
+    align-items: top;
+    text-align: center; /* Center-align the text */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 200px; /* Fixed width */
+    height: 130px; /* Fixed height */
+}
+
+/* Styling for the pomodoro title */
+.timer-container .timer .timer1 {
+    margin: 0;
+    padding: 5px;
+    font-size: 1rem; /* Adjust the size as needed */
+    color: #007BFF; /* Adjust the color as needed */
+}
+
+/* Styling for the time display */
+.timer-container .timer .time-display {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 5px;
+}
+
+.timer-container .timer .timer1 {
+    display: inline-block;
+}
+
+/* Styling for the buttons */
+.timer-container .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center-align the buttons */
+    padding: 3px;
+}
+
+.timer-container .buttons button {
+    font-size: .7rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.timer-container .buttons button:hover {
+    background-color: #0056b3;
+}
+
+.timer-container .buttons button:disabled {
+    cursor: not-allowed;
+    background-color: #c0c0c0;
+    opacity: 0.7;
+}
+
+.cal-container  {
+    align-items: top;
+    text-align: center; /* Center-align the text */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 200px; /* Fixed width */
+    height: 130px; /* Fixed height */
+}
+
+.cal-container  .cal-display {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 5px;
+}

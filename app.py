@@ -5,8 +5,11 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
+from flask_migrate import Migrate  
 from helpers import apology, login_required, lookup, usd,days_to_date
 from flask import jsonify
+from flask_sqlalchemy import SQLAlchemy  # Add this line
+from flask_migrate import Migrate # Add this line
 
 # Configure application
 app = Flask(__name__)
@@ -20,10 +23,14 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///data.db")
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+db = SQLAlchemy(app)
+
+# db = SQL("sqlite:///data.db")
 
 
-
+migrate = Migrate(app, db)
 
 @app.after_request
 def after_request(response):
@@ -331,3 +338,5 @@ def register():
     return apology("TODO")
 
 
+if __name__ == "__main__":
+    app.run(debug=True)

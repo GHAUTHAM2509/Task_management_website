@@ -1,5 +1,0 @@
-Flask
-Flask-Session
-Werkzeug
-cs50
-Jinja2
